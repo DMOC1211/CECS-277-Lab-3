@@ -54,7 +54,7 @@ def display_board(board):
 
 
 def main():
-
+    print('Welcome to Minesweeper Maker')
     rows = check_input.get_int_range("Enter number of rows: (5-10)", 5, 10)
     cols = check_input.get_int_range("Enter number of columns: (5-10)", 5, 10)
     mines = check_input.get_int_range("Enter number of mines: (5-10)", 5, 10)
