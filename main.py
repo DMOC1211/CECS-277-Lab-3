@@ -21,8 +21,8 @@ def create_board(rows, cols):
     return board
 
 def place_mines (board,mines):
-    cols = len(board)
-    rows = len(board[0])
+    rows = len(board)
+    cols = len(board[0])
     placed = 0
     while placed < mines:
         r = random.randint(0, rows - 1)
@@ -54,14 +54,14 @@ def display_board(board):
 
 
 def main():
-    print('Welcome to Minesweeper Maker')
-    rows = check_input.get_int_range("Enter number of rows: (5-10)", 5, 10)
-    cols = check_input.get_int_range("Enter number of columns: (5-10)", 5, 10)
-    mines = check_input.get_int_range("Enter number of mines: (5-10)", 5, 10)
+
+    rows = check_input.get_int_range("Enter number of rows: (5-10): ", 5, 10)
+    cols = check_input.get_int_range("Enter number of columns: (5-10): ", 5, 10)
+    mines = check_input.get_int_range("Enter number of mines: (5-10): ", 5, 10)
     new_board = create_board(rows, cols)
     place_mines(new_board, mines)
+    count_mines(new_board)
     display_board(new_board)
-
 
 
 main()
