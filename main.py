@@ -34,7 +34,16 @@ def place_mines (board,mines):
     
 
 def count_mines(board):
-    mines_counter = 0 
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if board[i][j] != 'X':
+                count = 0
+                for x in range(i-1, i+2):
+                    for y in range(j-1, j+2):
+                        if 0 <= x < len(board) and 0 <= y < len(board[i]) and board[x][y] == 'X':
+                            count += 1
+                board[i][j] = count
+    return board
 
 def display_board(board):
     for row in board: 
