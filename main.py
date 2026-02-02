@@ -1,7 +1,9 @@
 '''Names: Jacob Miranda & Daniel Puerto
 Date: 2/2/2026
 Group: 11 
-Description: '''
+Description: Create a program that generates a solution board for the game Minesweeper that prompts the user to enter a grid consisting of rows 
+and columns between 5-10 and the total number of mines ranging 5-10.  Then randomly places the mines on the grid and counting the adjacent squares of to check for the number of 
+mines (including diagonals). Then display the grid. '''
 
 
 import random
@@ -19,10 +21,12 @@ def create_board(rows, cols):
     return board
 
 def place_mines (board,mines):
+    mines_placed = 
+    if 
     
 
 def count_mines(board):
-    mines = 0 
+    mines_counter = 0 
     if 
 
 
