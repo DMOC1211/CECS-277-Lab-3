@@ -21,8 +21,13 @@ def create_board(rows, cols):
     return board
 
 def place_mines (board,mines):
-    mines_placed = 
-    if 
+    while placed < mines:
+        r = random.randint(0, rows - 1)
+        c = random.randint(0, cols - 1)
+        
+        if board[r][c] == 0:
+            board [r][c] = 'X'
+            placed +=1 
     
 
 def count_mines(board):
@@ -34,7 +39,7 @@ def main():
 
     x = check_input.get_int_range("Enter number of rows: (5-10)", 5, 10)
     y = check_input.get_int_range("Enter number of columns: (5-10)", 5, 10)
-    mines_placed = check_input.get_int_range("Enter number of mines: (5-10)", 5, 10)
+    mines = check_input.get_int_range("Enter number of mines: (5-10)", 5, 10)
     new_board = create_board(x, y)
     print(new_board)
 
