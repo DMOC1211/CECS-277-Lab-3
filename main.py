@@ -37,10 +37,11 @@ def count_mines(board):
 
 def main():
 
-    x = check_input.get_int_range("Enter number of rows: (5-10)", 5, 10)
-    y = check_input.get_int_range("Enter number of columns: (5-10)", 5, 10)
+    rows = check_input.get_int_range("Enter number of rows: (5-10)", 5, 10)
+    cols = check_input.get_int_range("Enter number of columns: (5-10)", 5, 10)
     mines = check_input.get_int_range("Enter number of mines: (5-10)", 5, 10)
     new_board = create_board(x, y)
+    places_mines(new_board, mines)
     print(new_board)
 
 
