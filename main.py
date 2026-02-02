@@ -35,6 +35,12 @@ def place_mines (board,mines):
 
 def count_mines(board):
     mines_counter = 0 
+
+def display_board(board):
+    for row in board: 
+        for value in row:
+            print(value, end=" ")
+        print()
     
 
 
