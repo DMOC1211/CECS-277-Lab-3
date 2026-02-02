@@ -21,6 +21,7 @@ def create_board(rows, cols):
     return board
 
 def place_mines (board,mines):
+    placed = 0
     while placed < mines:
         r = random.randint(0, rows - 1)
         c = random.randint(0, cols - 1)
